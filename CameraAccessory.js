@@ -12,7 +12,7 @@ module.exports = (hap, Accessory, log) => class CameraAccessory extends Accessor
 
     this.getService(hap.Service.AccessoryInformation)
       .setCharacteristic(hap.Characteristic.Manufacturer, 'Christian')
-      .setCharacteristic(hap.Characteristic.Model, 'Image')
+      .setCharacteristic(hap.Characteristic.Model, 'Camera')
       .setCharacteristic(hap.Characteristic.SerialNumber, '42')
       .setCharacteristic(hap.Characteristic.FirmwareRevision, packageJSON.version)
 
