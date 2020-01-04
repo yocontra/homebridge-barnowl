@@ -6,6 +6,7 @@ function Camera (hap, conf, log) {
   this.hap = hap
   this.conf = conf
   this.log = log
+  this.services = []
 }
 
 Camera.prototype.handleSnapshotRequest = function (request, callback) {
@@ -20,4 +21,9 @@ Camera.prototype.handleSnapshotRequest = function (request, callback) {
       log(reason)
       callback(reason)
     })
+}
+
+Camera.prototype.createCameraControlService = function () {
+  const controlService = new this.hap.Service.CameraControl()
+  this.services.push(controlService)
 }
