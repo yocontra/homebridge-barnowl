@@ -1,45 +1,36 @@
 {
-  "name": "homebridge-website-to-camera",
-  "version": "1.4.1",
-  "description": "shows the screenshot of a website as camera (image)",
+  "name": "homebridge-image-to-camera",
+  "version": "0.0.1",
+  "description": "shows a image as camera",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/werthdavid/homebridge-website-to-camera.git"
+    "url": "git+https://github.com/christian-fei/homebridge-image-to-camera.git"
   },
   "keywords": [
     "homebridge-plugin",
+    "homebridge-image",
     "homebridge-camera",
-    "camera",
-    "phantom",
-    "screenshot",
-    "virtual",
-    "maps",
-    "traffic",
-    "chromium",
-    "chrome",
-    "puppeteer"
+    "image"
   ],
   "authors": [
     {
-      "name": "David Werth",
-      "email": "werth.david@gmail.com"
+      "name": "Christian Fei",
+      "email": "crifei93@gmail.com"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/werthdavid/homebridge-website-to-camera/issues"
+    "url": "https://github.com/christian-fei/homebridge-image-to-camera/issues"
   },
   "engines": {
     "homebridge": ">=0.2.0",
     "node": ">=4.2.0"
   },
-  "homepage": "https://github.com/werthdavid/homebridge-website-to-camera#readme",
+  "homepage": "https://github.com/christian-fei/homebridge-image-to-camera#readme",
   "dependencies": {
-    "ip": "^1.1.5",
-    "puppeteer-core": "1.11.0"
   }
 }

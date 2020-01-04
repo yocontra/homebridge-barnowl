@@ -1,6 +1,6 @@
 {
   "bridge": {
-    "name": "Homebirdge",
+    "name": "Homebridge",
     "username": "CC:22:3D:E3:CE:33",
     "port": 51826,
     "pin": "012-34-567"
@@ -10,19 +10,11 @@
   ],
   "platforms": [
     {
-      "platform": "website-camera",
+      "platform": "image-camera",
       "cameras": [
         {
-          "name": "Google Maps Traffic",
-          "url": "http://google.com",
-          "height": 1334,
-          "width": 750,
-          "timeout": 10000
-        },
-        {
-          "name": "Google Maps Traffic #2",
-          "url": "http://google.com",
-          "scale": 1
+          "name": "Image 1",
+          "url": "/tmp/image1.png"
         }
       ]
     }
