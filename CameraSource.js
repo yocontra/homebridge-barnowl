@@ -27,3 +27,11 @@ Camera.prototype.createCameraControlService = function () {
   const controlService = new this.hap.Service.CameraControl()
   this.services.push(controlService)
 }
+
+Camera.prototype.handleStreamRequest = function (request) {
+}
+Camera.prototype.prepareStream = function (request, callback) {
+  callback()
+}
+Camera.prototype.handleCloseConnection = function (connectionID) {
+}
