@@ -1,7 +1,9 @@
+const CameraAccessory = require('./CameraAccessory')
+
 module.exports = function (homebridge) {
   homebridge.registerPlatform('homebridge-image-to-camera', 'image-camera', Platform, true)
   function Platform (log, config, api) {
-    this.CameraAccessory = require('./CameraAccessory')(homebridge.hap, homebridge.platformAccessory, log)
+    this.CameraAccessory = CameraAccessory(homebridge.hap, homebridge.platformAccessory, log)
     this.config = config || {}
     this.api = api
     this.log = log

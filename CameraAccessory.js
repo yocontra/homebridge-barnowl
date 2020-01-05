@@ -9,6 +9,7 @@ module.exports = (hap, Accessory, log) => class CameraAccessory extends Accessor
     var uuid = hap.uuid.generate('homebridge-image-to-camera:' + id)
 
     super(name, uuid, hap.Accessory.Categories.CAMERA)
+    log('setup camera accessory')
 
     this.getService(hap.Service.AccessoryInformation)
       .setCharacteristic(hap.Characteristic.Manufacturer, 'Christian')
@@ -20,6 +21,8 @@ module.exports = (hap, Accessory, log) => class CameraAccessory extends Accessor
       log('identify')
       callback()
     })
+
+    log('configure camera source')
 
     this.configureCameraSource(new CameraSource(hap, conf, log))
   }
