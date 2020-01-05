@@ -31,5 +31,7 @@
     "node": ">=4.2.0"
   },
   "homepage": "https://github.com/christian-fei/homebridge-image-to-camera#readme",
-  "dependencies": {}
+  "dependencies": {
+    "ip": "^1.1.5"
+  }
 }
