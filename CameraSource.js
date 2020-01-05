@@ -26,6 +26,7 @@ CameraSource.prototype.handleSnapshotRequest = function (request, callback) {
 }
 
 CameraSource.prototype.createCameraControlService = function () {
+  this.log('CameraSource createCameraControlService', this.conf)
   const controlService = new this.hap.Service.CameraControl()
   this.services.push(controlService)
 }
@@ -55,6 +56,8 @@ CameraSource.prototype.prepareStream = function (request, callback) {
   }
 
   response.address = addressResp
+
+  this.log('CameraSource prepareStream', response)
 
   callback(response)
 }
