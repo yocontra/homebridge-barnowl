@@ -1,6 +1,7 @@
 const ip = require('ip')
 const getImage = require('./get-image')
 const https = require('https');
+const http = require('http');
 
 module.exports = CameraSource
 
@@ -57,19 +58,35 @@ CameraSource.prototype.handleSnapshotRequest = function (request, callback) {
 
     if (this.conf.url) {
 
-        let myURL = new URL(this.conf.url, 'https://www.w3.org/');
-        let body = [];
-        https.request(myURL, res => {
-            // XXX verify HTTP 200 response
-            res.on('data', chunk => {
-                body.push(chunk)
-            });
+        if (String(this.conf.url).startsWith("https://")) {
+            let myURL = new URL(this.conf.url, 'https://www.w3.org/');
+            let body = [];
+            https.request(myURL, res => {
+                // XXX verify HTTP 200 response
+                res.on('data', chunk => {
+                    body.push(chunk)
+                });
 
-            res.on('end', () => {
-                log('Got image!')
-                callback(null, Buffer.concat(body))
-            });
-        }).end()
+                res.on('end', () => {
+                    log('Got image!')
+                    callback(null, Buffer.concat(body))
+                });
+            }).end()
+        } else if (String(this.conf.url).startsWith("http://")) {
+            let myURL = new URL(this.conf.url, 'http://www.w3.org/');
+            let body = [];
+            http.request(myURL, res => {
+                // XXX verify HTTP 200 response
+                res.on('data', chunk => {
+                    body.push(chunk)
+                });
+
+                res.on('end', () => {
+                    log('Got image!')
+                    callback(null, Buffer.concat(body))
+                });
+            }).end()
+        }
 
     } else {
 
