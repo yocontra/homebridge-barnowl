@@ -1,0 +1,36 @@
+{
+  "pluginAlias": "BarnOwlCamera",
+  "pluginType": "platform",
+  "headerDisplay": "Supply ID and Auth bearer token for app.barnowl.tech",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "authToken": {
+        "title": "Auth Token",
+        "type": "string",
+        "placeholder": "Bearer xxx",
+        "required": true
+      },
+      "cameras": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Camera Name",
+              "type": "string",
+              "placeholder": "Camera 1",
+              "required": false
+            },
+            "id": {
+              "title": "Camera ID",
+              "type": "string",
+              "placeholder": "xxx-xxx-xxx-xxx",
+              "required": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

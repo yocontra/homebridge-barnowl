@@ -1,37 +1,31 @@
 {
-  "name": "homebridge-image-to-camera",
-  "version": "0.0.8",
-  "description": "shows a image as camera",
+  "name": "homebridge-barnowl",
+  "version": "1.0.0",
+  "description": "shows a barnowl as a camera",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christian-fei/homebridge-image-to-camera.git"
+    "url": "git+https://github.com/yocontra/homebridge-barnowl.git"
   },
   "keywords": [
     "homebridge-plugin",
     "homebridge-image",
     "homebridge-camera",
-    "image"
-  ],
-  "authors": [
-    {
-      "name": "Christian Fei",
-      "email": "crifei93@gmail.com"
-    }
+    "barnowl"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christian-fei/homebridge-image-to-camera/issues"
+    "url": "https://github.com/yocontra/homebridge-barnowl/issues"
   },
   "engines": {
     "homebridge": ">=0.2.0",
     "node": ">=4.2.0"
   },
-  "homepage": "https://github.com/christian-fei/homebridge-image-to-camera#readme",
+  "homepage": "https://github.com/yocontra/homebridge-barnowl#readme",
   "dependencies": {
-    "ip": "^1.1.5"
+    "node-fetch": "^2.0.0"
   }
 }

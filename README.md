@@ -1,14 +1,14 @@
-# homebridge-image-to-camera
+# homebridge-barnowl
 
-**Homebridge plugin for displaying an Image as Camera**
+**Homebridge plugin for displaying a BarnOwl as aCamera**
 
-<!-- [![NPM version](https://badge.fury.io/js/homebridge-image-to-camera.svg)](https://npmjs.org/package/homebridge-image-to-camera) [![Dependency Status](https://christian-dm.org/christian-fei/homebridge-image-to-camera.svg)](https://christian-dm.org/christian-fei/homebridge-image-to-camera) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![Downloads](https://img.shields.io/npm/dm/homebridge-image-to-camera.svg)](https://npmjs.org/package/homebridge-image-to-camera) -->
+<!-- [![NPM version](https://badge.fury.io/js/homebridge-barnowl.svg)](https://npmjs.org/package/homebridge-barnowl) [![Dependency Status](https://christian-dm.org/yocontra/homebridge-barnowl.svg)](https://christian-dm.org/yocontra/homebridge-barnowl) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![Downloads](https://img.shields.io/npm/dm/homebridge-barnowl.svg)](https://npmjs.org/package/homebridge-barnowl) -->
 
 # Installation
 
 Make sure you have homebridge installed.
 
-1. Install this plugin using: `sudo npm install -g homebridge-image-to-camera`
+1. Install this plugin using: `sudo npm install -g homebridge-barnowl`
 2. Update your Homebridge `config.json` using the sample below (append in the block 'platforms' not 'accessories')
 
 # Configuration
@@ -18,7 +18,7 @@ Update your config similar to this:
 ```json
  "platforms": [
       {
-         "platform": "image-camera",
+         "platform": "barnowl-camera",
          "images": [
             {
                "name": "Local Image",

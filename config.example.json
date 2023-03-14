@@ -10,11 +10,12 @@
   ],
   "platforms": [
     {
-      "platform": "image-camera",
-      "images": [
+      "platform": "BarnOwlCamera",
+      "authToken": "Bearer XYZ",
+      "cameras": [
         {
-          "name": "Image 1",
-          "path": "/home/pi/image1.jpg"
+          "name": "Camera 1",
+          "id": "c87a003e-7963-4ab9-ae31-d8f092844cf5"
         }
       ]
     }
